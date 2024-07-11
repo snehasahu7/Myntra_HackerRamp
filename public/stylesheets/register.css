@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(/images/bg3.svg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color:black;
+}
+
+
+#algn{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+
+.dashboard {
+    max-width: 1250px;
+    min-height: 800px;
+    background: #f2f2f2;
+    margin: 50px auto;
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.12);
+    overflow-x: hidden;
+  }
+
+#container .head{
+    font-weight: 700;
+    font-size: larger;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+}
+
+.input-container .inpt{
+    padding: 10px;
+    margin: 5px 10px;
+    border: 2px solidblack;
+    border-radius: 25px;
+    background-color: transparent;
+    color:black;
+}
+
+::placeholder {
+    font-weight: 600;
+    color:black;
+    opacity: 1;
+}
+
+.rem-forgot{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+    font-size: 11px;
+    font-weight: 400;
+    margin: 8px;
+}
+
+.rem{
+    display: flex;
+    align-items: center;
+}
+
+.rem-forgot span a{
+    text-decoration: none;
+    color:black;
+}
+
+.rem-forgot span a:hover{
+    color: b#514F59;
+}
+
+.btn:hover {
+    color:white;
+    background-color: black;
+
+}
+
+.input-container .btn{
+    margin: 0 12px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+.input-container .btn:hover{
+    background-color: black;
+    color:white;
+}
+#container .footer{
+    font-size: 11px;
+    font-weight: 400;
+}
+
+#container .footer a{
+    text-decoration: none;
+    color:black;
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+#container .footer a:hover{
+    color: black;
+}

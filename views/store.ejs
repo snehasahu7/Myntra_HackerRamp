@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .card {
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            border-radius: 10px;
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        /* added media query to increase height on large window views */
+        @media (min-width: 1024px) {
+            .card {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
+        <div class="flex flex-col items-center mb-4">
+            <img src="../images/logo.jpeg" alt="Myntra Logo" class="h-10 w-12 mr-2">
+            <h1 class="text-gray-600 font-bold py-2 px-4">
+                Select Your Store
+            </h1>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+            <div class="w-full md:w-2/3 lg:w-1/2 xl:w-1/2 p-6">
+               <a href="#"> <div class="card" style="background-image: url('../images/Myntra.jpeg')">
+                    <div class="p-8 lg:p-12 text-white">
+                        
+                    </div>
+                </div></a>
+            </div>
+            <div class="w-full md:w-2/3 lg:w-1/2 xl:w-1/2 p-6">
+                <a href="#"><div class="card" style="background-image: url('../images/2.3.png')">
+                    <div class="p-8 lg:p-12 text-white">
+                        
+                        
+                    </div>
+                </div></a>
+            </div>
+            <div class="w-full md:w-2/3 lg:w-1/2 xl:w-1/2 p-6">
+              <a href="#"><div class="card" style="background-image: url('../images/fwd.jpeg')">
+                  <div class="p-8 lg:p-12 text-white">
+                      
+                      
+                  </div>
+              </div></a>
+          </div>
+            <div class="w-full md:w-2/3 lg:w-1/2 xl:w-1/2 p-6">
+                <a href="#"><div class="card" style="background-image: url('../images/luxe.jpeg')">
+                    <div class="p-8 lg:p-12 text-white">
+                       
+                       
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
