@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Z-Hub </title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <script src="nav.js"></script>
+  <style>
+    
+    body {
+      @apply h-screen flex flex-col justify-center bg-gray-100;
+      
+    }
+  </style>
 </head>
 <body>
-  <div id="algn">
-    <div id="container">
-        <p class="head">Login</p>
-        <form action="/" class="input-container">
-            <input type="email" placeholder="Enter Email" class="inpt" required>
-            <input type="password" placeholder="Enter Password" class="inpt" required>
-            <div class="rem-forgot">
-                <div class="rem">
-                    <input type="checkbox" for="rem-tik">
-                    <label for="rem-tik">Remember me</label>
-                </div>
-                <span><a href="#">Forgot password</a></span>
-            </div>
-            <button value="submit" class="btn">Login</button>
-        </form>
-        <p class="footer">Don't have account? <a href="/register">Register</a></p>
-    </div>
-    </div>
+  
+  <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 flex flex-col  items-center mb-4">
+	
+		<img src="../images/logo.jpeg" alt="Myntra Logo" class="h-15 w-20 mr-2">
+		
+  </div>
+  <div class="max-w-md mx-auto p-4 mt-4 bg-white rounded shadow-md ">
+	
+    <h2 class="text-2xl font-bold mb-4">Login</h2>
+    <form>
+      <label class="block mb-2" for="email">Email</label>
+      <input class="w-full p-4 pl-10 text-sm text-gray-700 border border-gray-300 rounded" type="email" id="email" placeholder="example@example.com">
+      <label class="block mb-2" for="password">Password</label>
+      <input class="w-full p-4 pl-10 text-sm text-gray-700 border border-gray-300 rounded" type="password" id="password" placeholder="●●●●●●●●">
+      <div class="flex items-center mb-4">
+        <input class="mr-2" type="checkbox" id="remember-me">
+        <label class="text-sm text-gray-600" for="remember-me">Remember me</label>
+      </div>
+      <button class="bg-blue-500 hover:bg-orange-700 text-white font-bold py-1 px-4 rounded" type="submit">Login</button>
+    </form>
+    <p class="text-sm text-gray-600 mt-4">Don't have an account? <a class="text-orange-500 hover:text-orange-700 underline" href="./register.ejs">Sign up</a></p>
+  </div>
 </body>
 </html>
