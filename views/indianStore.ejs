@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images//myntra-logo.png" type="image/png">
+    <title>Zhub India</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, white 50%, pink 50%);
+        }
+        .card {
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .heart {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            font-size: 1.25rem;
+            color: black;
+            z-index: 20;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center">
+                <img src="../images/myntra-logo.png" alt="Logo Image" class="h-10 w-15 mr-8">
+                <nav>
+                    <ul class="flex space-x-6 font-bold">
+                        <li><a href="#" class="text-gray-700 hover:text-gray-900">MEN</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-gray-900">WOMEN</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-gray-900">KIDS</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-gray-900">HOME & LIVING</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-gray-900">BEAUTY</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-gray-900">STUDIO NEW</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center">
+                <input type="search" class="bg-gray-100 text-black rounded p-2 mr-2"
+                    placeholder="Search for products, brands and more">
+            </div>
+            <ul class="flex space-x-4 mr-4">
+                <li><a href="#" class="text-black-700 text-xs font-bold">Profile</a></li>
+                <li><a href="#" class="text-black-700 text-xs font-bold">Wishlist</a></li>
+                <li><a href="#" class="text-black-700 text-xs font-bold">Bag</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header -->
+    <div class="p-4 text-sm">
+        <p>Zhub/ <span class="font-bold">Indian Store</span></p>
+    </div>
+    <header class="text-center pt-10">
+        <h1 class="text-7xl font-bold text-pink-600">INDIA'S FASHION ICONS</h1>
+    </header>
+
+    <!-- Cards Container -->
+    <div class="relative w-full flex justify-center items-center" style="height: 500px;">
+        <!-- Card 1 -->
+        <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
+            style="position: absolute; transform: translateX(-370px); z-index: 1; width: 240px; height: 360px;">
+            <div class="flex flex-row justify-between m-3 relative">
+                <div class="heart">♡</div>
+                <i class="fa fa-share-alt absolute top-3 right-3"></i>
+            </div>
+            <img src="../images/indianStore/8.png" alt="Shah Rukh Khan" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-opacity-75 p-4">
+                <h3 class="text-lg bg-black p-1.5 text-white rounded-md text-center font-semibold">Shah Rukh Khan</h3>
+                <div class="mt-2 bg-white shadow-lg text-black py-1 px-2 rounded-md left-2"><i class="fa fa-plus mr-8"></i> View Styles</div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
+            style="position: absolute; transform: translateX(-180px); z-index: 2; width: 240px; height: 370px;">
+            <div class="flex flex-row justify-between m-3 relative">
+                <div class="heart">♡</div>
+                <i class="fa fa-share-alt absolute top-3 right-3"></i>
+            </div>
+            <img src="../images/indianStore/7.png" alt="Katrina Kaif" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-opacity-75 p-4">
+                <h3 class="text-lg bg-black p-1.5 text-white rounded-md text-center font-semibold">Katrina Kaif</h3>
+                <div class="mt-2 bg-white shadow-lg text-black py-1 px-2 rounded-md left-2"><i class="fa fa-plus mr-8"></i> View Styles</div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
+            style="position: absolute; z-index: 3; width: 240px; height: 380px;">
+            <div class="flex flex-row justify-between m-3 relative">
+                <div class="heart">♡</div>
+                <i class="fa fa-share-alt absolute top-3 right-3"></i>
+            </div>
+            <img src="../images/indianStore/6.png" alt="Alia Bhatt" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-opacity-75 p-4">
+                <h3 class="text-lg bg-black p-1.5 text-white rounded-md text-center font-semibold">Alia Bhatt</h3>
+                <div class="mt-2 bg-white shadow-lg text-black py-1 px-2 rounded-md left-2"><i class="fa fa-plus mr-8"></i> View Styles</div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
+            style="position: absolute; transform: translateX(190px); z-index: 2; width: 240px; height: 370px;">
+            <div class="flex flex-row justify-between m-3 relative">
+                <div class="heart">♡</div>
+                <i class="fa fa-share-alt absolute top-3 right-3"></i>
+            </div>
+            <img src="../images/indianStore/9.png" alt="Ranbir Kapoor" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-opacity-75 p-4">
+                <h3 class="text-lg bg-black p-1.5 text-white rounded-md text-center font-semibold">Ranbir Kapoor</h3>
+                <div class="mt-2 bg-white shadow-lg text-black py-1 px-2 rounded-md left-2"><i class="fa fa-plus mr-8"></i> View Styles</div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
+            style="position: absolute; transform: translateX(370px); z-index: 1; width: 240px; height: 360px;">
+            <div class="flex flex-row justify-between m-3 relative">
+                <div class="heart">♡</div>
+                <i class="fa fa-share-alt absolute top-3 right-3"></i>
+            </div>
+            <img src="../images/indianStore/10.png" alt="Deepika Padukone" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-opacity-75 p-4">
+                <h3 class="text-lg bg-black p-1.5 text-white rounded-md text-center font-semibold">Deepika Padukone</h3>
+                <div class="mt-2 bg-white shadow-lg text-black py-1 px-2 rounded-md left-2"><i class="fa fa-plus mr-8"></i> View Styles</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
