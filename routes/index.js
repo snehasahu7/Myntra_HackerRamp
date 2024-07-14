@@ -19,9 +19,12 @@ router.get('/taylor', function(req, res, next) {
 router.get('/store', function(req, res, next) {
   res.render('store', { title: 'store' });
 });
-
+router.get('/shop', function(req, res, next) {
+  res.render('shop', { title: 'shop' });
+});
 router.get('/india', function(req, res, next) {
   res.render('indianStore', { title: 'indianStore' });
 });
+
 
 module.exports = router;
