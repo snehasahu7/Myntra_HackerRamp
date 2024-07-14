@@ -22,6 +22,9 @@ router.get('/india', function(req, res, next) {
 router.get('/alia', function(req, res, next) {
   res.render('alia', { title: 'alia' });
 });
+router.get('/holly', function(req, res, next) {
+  res.render('hollywoodstore', { title: 'hollywoodstore' });
+});
 router.get('/taylor', function(req, res, next) {
   res.render('taylor', { title: 'taylor' });
 });
