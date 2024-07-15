@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Z-Hub </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <script src="nav.js"></script>
+  
   <style>
     
     body {
@@ -35,9 +35,57 @@
       <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 mt-4 rounded shadow-md" type="submit" id="signup-btn">Sign Up</button>
     </form>
     <div id="signup-response"></div>
-    <p class="text-sm text-gray-600 mt-4">Already have an account? <a class="text-orange-500 hover:text-orange-700 underline" href="./index.ejs">Login</a></p>
+    <p class="text-sm text-gray-600 mt-4">Already have an account? <a class="text-orange-500 hover:text-orange-700 underline" onclick="location.href='login'">Login</a></p>
   </div>
-  <script src="../routes/script.js"></script>
+ <script>
+    const signUpForm = document.getElementById('signup-form');
+    
+    // Get the login and signup buttons
+    
+    const signUpBtn = document.getElementById('signup-btn');
+    
+    // Get the response divs
+   
+    const signUpResponseDiv = document.getElementById('signup-response');
+    
+    
+    
+    // Signup functionality
+    signUpBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name= document.getElementById('name').value
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const repeatPassword = document.getElementById('confirm-password').value;
+    
+      if (password!== repeatPassword) {
+        signUpResponseDiv.innerHTML = 'Passwords do not match';
+        return;
+      }
+    
+      // Make a POST request to the API
+      fetch('http://127.0.0.1:5000/api/users/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name,email, password })
+      })
+     .then(response => response.json())
+     .then(data => {
+        if (data.token) {
+          signUpResponseDiv.innerHTML = 'Sign up successful!';
+          // Navigate to the next page
+          window.location.href = 'login';
+        } else {
+          signUpResponseDiv.innerHTML = 'Sign up failed';
+        }
+      })
+     .catch(error => {
+        signUpResponseDiv.innerHTML = 'Error: ' + error.message;
+      });
+    });
+  </script>
 </body>
 </html>
    
