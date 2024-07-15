@@ -88,7 +88,7 @@
         <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
             style="position: absolute; transform: translateX(-180px); z-index: 2; width: 240px; height: 370px;">
             <div class="flex flex-row justify-between m-3 relative">
-                <div class="heart">♡</div>
+                <div class="heart"><span class="text-red-500 text-lg">&hearts;</span></div>
                 <i class="fa fa-share-alt absolute top-3 right-3"></i>
             </div>
             <img src="../images/indianStore/7.png" alt="Katrina Kaif" class="w-full h-full object-cover">
@@ -101,8 +101,64 @@
         <div class="card border border-black bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 cursor-pointer"
             style="position: absolute; z-index: 3; width: 240px; height: 380px;">
             <div class="flex flex-row justify-between m-3 relative">
-                <div class="heart">♡</div>
-                <i class="fa fa-share-alt absolute top-3 right-3"></i>
+                <div class="heart"><span class="text-red-500 text-lg">&hearts;</span></div>
+                <a  id="share-btn">
+                    <i class="fa fa-share-alt absolute top-3 right-3"></i>
+                </a>
+                  
+                  <!-- Share menu -->
+                  <ul class="absolute hidden text-gray-700 pt-1 mt-6" id="share-menu">
+                    <li><a href="#" class="flex items-center justify-center w-8 h-8 bg-yellow-500 hover:bg-blue-700 rounded-full cursor-pointer " onclick="share('facebook')">
+                      <i class="fa fa-facebook-f absolute top-3 right-3 text-lg"></i>
+                    </a></li>
+                    <li><a href="#" class="flex items-center justify-center w-8 h-8 bg-blue-300 hover:bg-blue-500 rounded-full cursor-pointer" onclick="share('twitter')">
+                      <i class="fa fa-twitter absolute text-lg"></i>
+                    </a></li>
+                    
+                    <li><a href="#" class="flex items-center justify-center w-8 h-8 bg-green-500 hover:bg-green-700 rounded-full cursor-pointer" onclick="share('whatsapp')">
+                      <i class="fa fa-whatsapp absolute text-lg"></i>
+                    </a></li>
+                    <li><a href="#" class="flex items-center justify-center w-8 h-8 bg-red-500 hover:bg-red-700 rounded-full cursor-pointer" onclick="share('email')">
+                      <i class="fa fa-envelope absolute text-lg"></i>
+                    </a></li>
+                  </ul>
+
+                  <script>
+                    const shareBtn = document.getElementById('share-btn');
+const shareMenu = document.getElementById('share-menu');
+
+shareBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  shareMenu.classList.toggle('hidden');
+});
+
+const share = (platform) => {
+  const url = window.location.href;
+  let link = '';
+
+  switch (platform) {
+    case 'facebook':
+      link = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      break;
+    case 'twitter':
+      link = `https://twitter.com/intent/tweet?url=${url}&text=Check%20this%20out!`;
+      break;
+    case 'linkedin':
+      link = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=Check%20this%20out!`;
+      break;
+    case 'whatsapp':
+      link = `https://api.whatsapp.com/send?text=${url}`;
+      break;
+    case 'email':
+      link = `mailto:?subject=Check%20this%20out!&body=${url}`;
+      break;
+    default:
+      console.error(`Unknown platform: ${platform}`);
+  }
+
+  window.open(link, '_blank');
+};
+                  </script>
             </div>
             <img src="../images/indianStore/6.png" alt="Alia Bhatt" class="w-full h-full object-cover">
             <div class="absolute bottom-0 left-0 right-0 bg-opacity-75 p-4">
