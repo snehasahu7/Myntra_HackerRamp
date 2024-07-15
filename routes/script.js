@@ -35,7 +35,7 @@ loginBtn.addEventListener('click', (e) => {
     }
   })
  .catch(error => {
-    loginResponseDiv.innerHTML = 'Error: ' error.message;
+    loginResponseDiv.innerHTML = 'Error: ' + error.message;
   });
 });
 
@@ -70,6 +70,6 @@ signUpBtn.addEventListener('click', (e) => {
     }
   })
  .catch(error => {
-    signUpResponseDiv.innerHTML = 'Error: ' error.message;
+    signUpResponseDiv.innerHTML = 'Error: ' + error.message;
   });
 });
