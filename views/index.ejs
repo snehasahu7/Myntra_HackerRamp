@@ -24,7 +24,7 @@
   <div class="max-w-md mx-auto p-4 mt-4 bg-white rounded shadow-md ">
 	
     <h2 class="text-2xl font-bold mb-4">Login</h2>
-    <form>
+    <form id="login-form">
       <label class="block mb-2" for="email">Email</label>
       <input class="w-full p-4 pl-10 text-sm text-gray-700 border border-gray-300 rounded" type="email" id="email" placeholder="example@example.com">
       <label class="block mb-2" for="password">Password</label>
@@ -33,9 +33,11 @@
         <input class="mr-2" type="checkbox" id="remember-me">
         <label class="text-sm text-gray-600" for="remember-me">Remember me</label>
       </div>
-      <button class="bg-blue-500 hover:bg-orange-700 text-white font-bold py-1 px-4 rounded" type="submit">Login</button>
+      <button class="bg-blue-500 hover:bg-orange-700 text-white font-bold py-1 px-4 rounded" type="submit" id="login-btn">Login</button>
     </form>
+    <div id="login-response"></div>
     <p class="text-sm text-gray-600 mt-4">Don't have an account? <a class="text-orange-500 hover:text-orange-700 underline" href="./register.ejs">Sign up</a></p>
   </div>
+  <script src="../routes/script.js"></script>
 </body>
 </html>
